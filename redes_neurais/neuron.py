@@ -11,7 +11,7 @@ class Neuron:
         self.delta: float = 0.0
 
     def output(self, inputs: List[float]) -> float:
-        self.output_cache = self.activation_function(dot_product(inputs, self.weights))
+        self.output_cache = dot_product(inputs, self.weights)
         return self.activation_function(self.output_cache)
     
     
